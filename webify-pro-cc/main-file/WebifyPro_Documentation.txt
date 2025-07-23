@@ -1,0 +1,78 @@
+
+Webify Pro – Documentation Guide
+===============================
+
+Thank you for purchasing Webify Pro! Please follow the steps below to customize the app with your own branding and website.
+
+-------------------------------------------------------
+1. Set Your Website URL
+-------------------------------------------------------
+File: lib/utils/api_clients.dart
+
+- Open this file.
+- Find the line with `baseUrl`.
+- Replace the URL with your own website link.
+
+Example:
+baseUrl = "https://yourwebsite.com/";
+
+-------------------------------------------------------
+2. Set Your App Name
+-------------------------------------------------------
+File: lib/utils/strings.dart
+
+- Open this file.
+- Find the line with `appName`.
+- Change it to your desired app name (e.g. your business name or brand).
+
+Example:
+appName = "My Website";
+
+-------------------------------------------------------
+3. Change App Icon
+-------------------------------------------------------
+File: assets/app-icon.png
+
+- Replace this image with your own app icon (PNG format, 512x512 size).
+- Make sure the file name remains `app-icon.png`.
+
+-------------------------------------------------------
+4. Change App Name on Phone (Launcher Name)
+-------------------------------------------------------
+To change the name that appears under your app icon:
+
+1. Open terminal or command prompt.
+2. Run this command (replace *Your App Name* with your desired name):
+
+flutter pub run rename_app:main all="Your App Name"
+
+-------------------------------------------------------
+5. Change App Package Name (Android & iOS)
+-------------------------------------------------------
+To change the app's internal package name (used for publishing):
+
+1. Open terminal or command prompt.
+2. Run this command (replace *com.yourcompany.appname* with your own package name):
+
+flutter pub run change_app_package_name:main com.yourcompany.appname
+
+Example:
+flutter pub run change_app_package_name:main com.webify.myapp
+
+-------------------------------------------------------
+6. Apply the New App Icon
+-------------------------------------------------------
+After replacing your icon image:
+
+1. Open terminal or command prompt.
+2. Run this command to generate icons:
+
+flutter pub run flutter_launcher_icons:main
+
+-------------------------------------------------------
+Support
+-------------------------------------------------------
+If you need any help, feel free to contact us via Codecanyon or email support.
+
+Thank you!
+– Nexovia Solutions
